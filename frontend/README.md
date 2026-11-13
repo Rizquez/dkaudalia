@@ -32,9 +32,35 @@ VITE_CLERK_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 frontend/
 ├── public
-
+│   ├── _headers
+│   ├── _redirects
+│   └── dkaudalia.ico
 ├── src
-
+│   ├── core
+│   │   ├── env.ts
+│   │   └── errors.ts
+│   └── ui
+│       ├── app/...
+│       ├── components
+│       │   ├── Button/...
+│       │   ├── Footer/...
+│       │   └── PageLoader/...
+│       ├── hooks/...
+│       ├── layouts
+│       │   ├── Private/...
+│       │   └── Public/...
+│       ├── pages
+│       │   ├── Dashboard/...
+│       │   ├── Home/...
+│       │   └── PrivacyPolicy/...
+│       ├── routes
+│       │   ├── components
+│       │   │   ├── RouteError/...
+│       │   │   └── Router/...
+│       │   ├── index.ts
+│       │   └── paths.ts
+│       ├── styles/...
+│       └── main.tsx
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
@@ -89,11 +115,11 @@ frontend/
 
 ### Workflow
 
-1. **Feature branching:** Each new feature or fix must be developed on a separate branch; these new branches must be created from `release` and never from `main`.
+1. **Feature branching:** Each new feature or fix must be developed on a separate branch; these new branches must be created from `dev` and never from `main`.
 2. **Commits:** Descriptive and following the `"type: message"` convention. Example:
    - feat: add Google authentication.
    - fix: fix error when validating empty credentials.
    - docs: Update installation instructions.
    - refactor: Simplify user validation logic.
-3. **Pull requests:** Before merging changes into `release`, a `pull request` must be created and reviewed and approved.
+3. **Pull requests:** Before merging changes into `dev`, a `pull request` must be created and reviewed and approved.
 4. **Code review:** Include a clear description of the changes and how to test them.
