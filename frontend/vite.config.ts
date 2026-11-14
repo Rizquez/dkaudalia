@@ -1,3 +1,4 @@
+
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -9,7 +10,7 @@ const contentSecurityPolicy = [
     "script-src 'self' 'unsafe-inline'",
     "https://clever-osprey-3185.clerk.accounts.dev",
     "https://challenges.cloudflare.com",
-    "https://*.protect.clerk.com:*",
+    "https://*.protect.clerk.com",
   ].join(" "),
   [
     "connect-src 'self'",
@@ -30,7 +31,7 @@ const contentSecurityPolicy = [
   [
     "frame-src 'self'",
     "https://challenges.cloudflare.com",
-    "https://*.protect.clerk.com:*",
+    "https://*.protect.clerk.com",
   ].join(" "),
   "object-src 'none'",
   "base-uri 'self'",
