@@ -8,6 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/ui/components/Button";
 import type { Module } from "./types";
+import { paths } from "@/ui/routes/paths";
+import { SignInButton, useUser } from "@clerk/react";
+import { Navigate } from "react-router";
 
 const modules: Module[] = [
   {
@@ -41,6 +44,14 @@ const modules: Module[] = [
 ];
 
 const Home = () => {
+  const { isLoaded, isSignedIn } = useUser();
+
+  if (!isLoaded) return null;
+
+  if (isSignedIn) {
+    return <Navigate to={paths.dashboard.href} replace />;
+  }
+
   return (
     <div className="flex flex-1 flex-col bg-muted text-text-primary">
       <header className="border-b border-border bg-surface">
@@ -77,14 +88,15 @@ const Home = () => {
               </p>
 
               <div className="mt-8">
-                <Button
-                  onClick={() => {
-                    // TODO: Navegar a la herramienta.
-                  }}
+                <SignInButton
+                  mode="modal"
+                  forceRedirectUrl={paths.dashboard.href}
                 >
-                  Acceder a la herramienta
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </Button>
+                  <Button>
+                    Acceder a la herramienta
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </Button>
+                </SignInButton>
               </div>
             </div>
 

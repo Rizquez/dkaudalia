@@ -1,15 +1,12 @@
 import { isRouteErrorResponse, useNavigate, useRouteError } from "react-router";
 
 import { paths } from "@/ui/routes/paths";
+import { useUser } from "@clerk/react";
 
 const useRouteErrorPage = () => {
   const navigate = useNavigate();
   const error = useRouteError();
-
-  // TODO: Mientras se aplica Clerk
-  const isSignedIn = false;
-  const isLoaded = true;
-  // TODO: Mientras se aplica Clerk
+  const { isLoaded, isSignedIn } = useUser();
 
   const isRouteError = isRouteErrorResponse(error);
 

@@ -2,6 +2,11 @@ import ApplicationError from "@/core/errors";
 import "@/ui/styles/global.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppRouter from "../routes/Router";
+import { CLERK_PUBLISHABLE_KEY } from "@/core/env";
+import AuthTokenHandler from "../handlers/AuthTokenHandler";
+import AppModal from "../components/AppModal";
+import { ModalProvider } from "../contexts/ModalContext";
+import { ClerkProvider } from "@clerk/react";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,10 +22,20 @@ const queryClient = new QueryClient({
   },
 });
 
+if (!CLERK_PUBLISHABLE_KEY) {
+  throw new Error("Missing Clerk publishable key.");
+}
+
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AppRouter />
-  </QueryClientProvider>
+  <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
+    <AuthTokenHandler />
+    <QueryClientProvider client={queryClient}>
+      <ModalProvider>
+        <AppRouter />
+        <AppModal />
+      </ModalProvider>
+    </QueryClientProvider>
+  </ClerkProvider>
 );
 
 export default App;

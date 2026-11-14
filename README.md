@@ -1,4 +1,4 @@
-# Dkaudalia - v0.0.0
+# Dkaudalia - v0.1.0
 
 ## 🧾 Project description
 

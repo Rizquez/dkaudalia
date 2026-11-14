@@ -7,15 +7,15 @@ const contentSecurityPolicy = [
   "default-src 'self'",
   [
     "script-src 'self' 'unsafe-inline'",
-    "https://stirring-wolf-16.clerk.accounts.dev",
+    "https://clever-osprey-3185.clerk.accounts.dev",
     "https://challenges.cloudflare.com",
-    "https://*.protect.clerk.com",
+    "https://*.protect.clerk.com:*",
   ].join(" "),
   [
     "connect-src 'self'",
     "http://127.0.0.1:8080",
-    "https://stirring-wolf-16.clerk.accounts.dev",
-    "https://*.protect.clerk.com",
+    "https://clever-osprey-3185.clerk.accounts.dev",
+    "https://*.protect.clerk.com:*",
     "https://clerk-telemetry.com",
     "https://*.clerk-telemetry.com",
     "https://fonts.googleapis.com",
@@ -30,7 +30,7 @@ const contentSecurityPolicy = [
   [
     "frame-src 'self'",
     "https://challenges.cloudflare.com",
-    "https://*.protect.clerk.com",
+    "https://*.protect.clerk.com:*",
   ].join(" "),
   "object-src 'none'",
   "base-uri 'self'",
