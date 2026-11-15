@@ -17,7 +17,7 @@ def verify_clerk_token(token: str, issuer: str, jwks_url: str) -> Dict[str, Any]
     if not issuer or not jwks_url:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="No se ha configurado la autenticación de Clerk.",
+            detail="No se ha configurado la autenticacion de Clerk.",
         )
 
     try:
@@ -35,7 +35,7 @@ def verify_clerk_token(token: str, issuer: str, jwks_url: str) -> Dict[str, Any]
     except Exception:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Token de autenticación no válido.",
+            detail="Token de autenticacion no valido.",
         )
 
 
@@ -43,7 +43,7 @@ def get_clerk_user(clerk_id: str, secret_key: str, timeout: int = 10) -> Dict[st
     if not secret_key:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="La clave secreta de Clerk no está configurada.",
+            detail="La clave secreta de Clerk no esta configurada.",
         )
 
     response = requests.get(

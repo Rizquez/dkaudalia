@@ -28,7 +28,7 @@ const AccessError = ({ message }: AccessErrorProps) => {
       <section className="w-full max-w-xl border border-border bg-surface">
         <header className="flex items-center justify-between bg-primary px-5 py-3 font-mono text-xs text-surface">
           <span>Dkaudalia / Acceso</span>
-          <span className="text-secondary">ERROR DE VERIFICACIÓN</span>
+          <span className="text-secondary">ERROR DE VERIFICACIoN</span>
         </header>
 
         <div className="flex flex-col items-center p-6 text-center sm:p-10">
@@ -40,7 +40,7 @@ const AccessError = ({ message }: AccessErrorProps) => {
           </div>
 
           <p className="mt-7 font-mono text-xs text-text-secondary">
-            Verificación fallida
+            Verificacion fallida
           </p>
 
           <h1 className="mt-3 text-2xl font-bold text-text-primary sm:text-3xl">
@@ -48,7 +48,7 @@ const AccessError = ({ message }: AccessErrorProps) => {
           </h1>
 
           <p className="mt-4 text-sm leading-7 text-text-secondary">
-            No hemos podido verificar tu cuenta en este momento. Inténtalo de
+            No hemos podido verificar tu cuenta en este momento. Intentalo de
             nuevo en unos instantes. Si el problema persiste, contacta con un
             administrador.
           </p>

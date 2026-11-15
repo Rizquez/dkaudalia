@@ -17,7 +17,7 @@ const modules: Module[] = [
     number: "01",
     name: "Datos de entrada",
     description:
-      "Proyecto, cuadro de alturas y espacios: la base de todos los cálculos.",
+      "Proyecto, cuadro de alturas y espacios: la base de todos los calculos.",
     icon: faClipboardList,
   },
   {
@@ -31,14 +31,14 @@ const modules: Module[] = [
     number: "03",
     name: "Extracciones",
     description:
-      "Espacios con extracción y sus sistemas, con los caudales necesarios.",
+      "Espacios con extraccion y sus sistemas, con los caudales necesarios.",
     icon: faWind,
   },
   {
     number: "04",
-    name: "Ventilación sala PCI",
+    name: "Ventilacion sala PCI",
     description:
-      "Calcula la ventilación de las salas de protección contra incendios.",
+      "Calcula la ventilacion de las salas de proteccion contra incendios.",
     icon: faFireExtinguisher,
   },
 ];
@@ -61,7 +61,7 @@ const Home = () => {
           </span>
 
           <div className="border-l border-border pl-4">
-            <p className="font-semibold">Clima y ventilación</p>
+            <p className="font-semibold">Clima y ventilacion</p>
             <p className="text-xs text-text-secondary">
               Proyecta el aire, nosotros hacemos las cuentas
             </p>
@@ -74,17 +74,17 @@ const Home = () => {
           <div className="mx-auto grid w-full max-w-7xl xl:grid-cols-2">
             <div className="flex flex-col justify-center px-5 py-12 xl:py-20">
               <p className="mb-6 font-mono text-xs text-text-secondary">
-                Plataforma técnica interna
+                Plataforma tecnica interna
               </p>
 
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-                Cálculo de clima y ventilación
+                Calculo de clima y ventilacion
               </h1>
 
               <p className="mt-6 max-w-xl leading-7 text-text-secondary">
                 Un espacio de trabajo para organizar los datos de entrada,
-                consultar tablas técnicas y gestionar la información de
-                climatización y ventilación de tus proyectos.
+                consultar tablas tecnicas y gestionar la informacion de
+                climatizacion y ventilacion de tus proyectos.
               </p>
 
               <div className="mt-8">
@@ -106,7 +106,7 @@ const Home = () => {
               </p>
 
               <h2 className="mt-3 mb-8 text-3xl font-bold">
-                Módulos de trabajo
+                Modulos de trabajo
               </h2>
 
               <div className="grid gap-3 sm:grid-cols-2">

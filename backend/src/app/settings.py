@@ -58,5 +58,5 @@ def get_settings() -> Union[Local, Render]:
     else:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="No se ha encontrado ningún entorno en las variables de entorno.",
+            detail="No se ha encontrado ningun entorno en las variables de entorno.",
         )

@@ -41,7 +41,7 @@ def get_allowed_user(
     if not current_user.access_allowed:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail="Tu acceso está pendiente de aprobación.",
+            detail="Tu acceso esta pendiente de aprobacion.",
         )
 
     return current_user

@@ -30,17 +30,17 @@ const PendingAccess = () => {
           </p>
 
           <h1 className="mt-3 text-2xl font-bold text-text-primary sm:text-3xl">
-            Tu registro está en revisión
+            Tu registro esta en revision
           </h1>
 
           <p className="mt-4 text-sm leading-7 text-text-secondary">
             Tu cuenta se ha creado correctamente, pero el acceso a Dkaudalia
-            está pendiente de aprobación por parte de un administrador.
+            esta pendiente de aprobacion por parte de un administrador.
           </p>
 
           <div className="mt-6 flex w-full items-center justify-center gap-3 border border-border bg-background p-4 text-sm text-text-secondary">
             <FontAwesomeIcon icon={faClock} className="shrink-0 text-primary" />
-            <span>Esperando la aprobación del administrador.</span>
+            <span>Esperando la aprobacion del administrador.</span>
           </div>
 
           <div className="mt-8">

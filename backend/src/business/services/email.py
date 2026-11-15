@@ -25,7 +25,7 @@ def send_access_request_email(
             "email": email,
             "subject": "Nueva solicitud de acceso a Dkaudalia",
             "message": (
-                f"Nuevo usuario pendiente de aprobación:\n\n"
+                f"Nuevo usuario pendiente de aprobacion:\n\n"
                 f"Name: {name}\n"
                 f"Email: {email}\n"
                 f"Clerk ID: {clerk_id}"

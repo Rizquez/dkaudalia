@@ -50,9 +50,7 @@ const AppModal = () => {
         className="w-full max-w-md border border-border bg-surface"
       >
         <header className="flex items-center justify-between bg-primary px-5 py-3">
-          <span className="font-mono text-xs text-surface">
-            Dkaudalia / Notificación
-          </span>
+          <span className="font-mono text-xs text-surface">Notificacion</span>
 
           <FontAwesomeIcon
             icon={icon}
