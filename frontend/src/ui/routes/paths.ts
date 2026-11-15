@@ -10,7 +10,7 @@ export const paths = {
   },
   privacypolicy: {
     href: "/politica-privacidad",
-    title: "Política de privacidad",
-    label: "Política de privacidad",
+    title: "Politica de privacidad",
+    label: "Politica de privacidad",
   },
 } as const;

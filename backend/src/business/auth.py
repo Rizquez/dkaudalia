@@ -84,7 +84,7 @@ class AuthBusiness(Business):
 
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="El usuario Clerk no tiene dirección de correo electrónico.",
+            detail="El usuario Clerk no tiene direccion de correo electronico.",
         )
 
     @staticmethod

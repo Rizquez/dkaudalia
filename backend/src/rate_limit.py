@@ -42,7 +42,7 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             return JSONResponse(
                 status_code=status.HTTP_429_TOO_MANY_REQUESTS,
                 content={
-                    "detail": "El equilibrador de carga se ha activado porque has realizado demasiadas solicitudes en un periodo de tiempo muy breve. Espera un momento y vuelve a cargar la página."
+                    "detail": "El equilibrador de carga se ha activado porque has realizado demasiadas solicitudes en un periodo de tiempo muy breve. Espera un momento y vuelve a cargar la pagina."
                 },
                 headers={"Retry-After": str(self.window_seconds)},
             )

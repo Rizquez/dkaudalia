@@ -7,6 +7,8 @@ import AuthTokenHandler from "../handlers/AuthTokenHandler";
 import AppModal from "../components/AppModal";
 import { ModalProvider } from "../contexts/ModalContext";
 import { ClerkProvider } from "@clerk/react";
+import ApiActivityHandler from "../handlers/ApiActivityHandler";
+import { ApiActivityProvider } from "../contexts/ApiActivityContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,8 +33,11 @@ const App = () => (
     <AuthTokenHandler />
     <QueryClientProvider client={queryClient}>
       <ModalProvider>
-        <AppRouter />
-        <AppModal />
+        <ApiActivityProvider>
+          <ApiActivityHandler />
+          <AppRouter />
+          <AppModal />
+        </ApiActivityProvider>
       </ModalProvider>
     </QueryClientProvider>
   </ClerkProvider>

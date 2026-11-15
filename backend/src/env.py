@@ -15,7 +15,7 @@ def _get_required_positive_int(key: str, default: int) -> int:
         parsed_value = int(value)
     except ValueError as ex:
         raise RuntimeError(
-            f"La variable de entorno {key} debe ser un número entero."
+            f"La variable de entorno {key} debe ser un numero entero."
         ) from ex
 
     if parsed_value <= 0:

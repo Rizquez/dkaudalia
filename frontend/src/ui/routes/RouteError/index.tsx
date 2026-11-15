@@ -55,7 +55,7 @@ const RouteError = () => {
           </div>
 
           <p className="mt-10 border-t border-border pt-5 text-xs text-text-secondary">
-            Si el problema persiste, inténtalo de nuevo más tarde.
+            Si el problema persiste, intentalo de nuevo mas tarde.
           </p>
         </div>
       </section>

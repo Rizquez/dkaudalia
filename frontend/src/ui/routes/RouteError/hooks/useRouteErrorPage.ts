@@ -14,13 +14,13 @@ const useRouteErrorPage = () => {
 
   const title = isRouteError
     ? error.status === 404
-      ? "Página no encontrada"
+      ? "Pagina no encontrada"
       : "Ha surgido un problema"
     : "Error inesperado";
 
   const description = isRouteError
     ? error.status === 404
-      ? "La página que estás buscando no existe o es posible que se haya trasladado."
+      ? "La pagina que estas buscando no existe o es posible que se haya trasladado."
       : error.statusText
     : ((error as Error)?.message ?? "Se ha producido un error inesperado.");
 
